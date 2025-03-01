@@ -9,6 +9,40 @@ body {
 
 .container {
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.project {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.project img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.project h2 {
+    margin-top: 0;
+    color: #333;
+}
+.project p {
+    color: #555;
+}
+.project a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+.project a:hover {
+    color: #45a049;
+}
+.project-list {
+    list-style-type: none;
+    padding: 0;
 }
 
 .info-box {
