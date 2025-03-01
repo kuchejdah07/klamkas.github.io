@@ -1,0 +1,31 @@
+<!-- about.html (O mnie) -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O mnie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>O mnie</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">O mnie</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="projects.html">Projekty</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img src="profile.jpg" alt="Moje zdjęcie" width="200">
+        <h2>Kim jestem?</h2>
+        <p>Jestem pasjonatem technologii, programowania i nowoczesnych rozwiązań internetowych...</p>
+    </main>
+    <footer>
+        <p>&copy; 2025 XYZ. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>
