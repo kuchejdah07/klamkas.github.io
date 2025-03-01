@@ -7,6 +7,10 @@ body {
     color: #333;
 }
 
+.container {
+    text-align: center;
+}
+
 .info-box {
     background-color: white; /* Białe tło ramki */
     border: 2px solid #000; /* Czarna ramka */
