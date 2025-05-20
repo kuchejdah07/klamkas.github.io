@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klamkas – Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Klamkas</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="shop">
+    <h2>Shop Our Products</h2>
+
+    <aside class="filters">
+      <h3>Filters</h3>
+      <label>
+        Type:
+        <select id="typeFilter">
+          <option value="all">All</option>
+          <option value="handle">Handles</option>
+          <option value="door">Doors</option>
+          <option value="bell">Doorbells</option>
+          <option value="accessory">Accessories</option>
+        </select>
+      </label>
+      <label>
+        Material:
+        <select id="materialFilter">
+          <option value="all">All</option>
+          <option value="wood">Wood</option>
+          <option value="metal">Metal</option>
+          <option value="glass">Glass</option>
+          <option value="carbon">Carbon</option>
+        </select>
+      </label>
+    </aside>
+
+    <div class="products" id="productList">
+      <div class="product" data-type="handle" data-material="metal">
+        <h3>SmartLock 2.0 Handle</h3>
+        <p>Fingerprint and NFC door handle with phone opening.</p>
+      </div>
+      <div class="product" data-type="handle" data-material="wood">
+        <h3>EkoWood Handle</h3>
+        <p>Eco-friendly handle made from FSC wood.</p>
+      </div>
+      <div class="product" data-type="door" data-material="glass">
+        <h3>SmartGlass Door</h3>
+        <p>Door made from smart glass with adjustable transparency.</p>
+      </div>
+      <div class="product" data-type="bell" data-material="metal">
+        <h3>Video AI Doorbell</h3>
+        <p>Doorbell with face recognition camera.</p>
+      </div>
+      <div class="product" data-type="accessory" data-material="metal">
+        <h3>SmartCode Lock</h3>
+        <p>Electronic lock with PIN code.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const typeFilter = document.getElementById('typeFilter');
+    const materialFilter = document.getElementById('materialFilter');
+    const products = document.querySelectorAll('.product');
+
+    function filterProducts() {
+      const type = typeFilter.value;
+      const material = materialFilter.value;
+
+      products.forEach(product => {
+        const matchesType = type === 'all' || product.dataset.type === type;
+        const matchesMaterial = material === 'all' || product.dataset.material === material;
+
+        if (matchesType && matchesMaterial) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+
+    typeFilter.addEventListener('change', filterProducts);
+    materialFilter.addEventListener('change', filterProducts);
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Klamkas. All rights reserved.</p>
+  </footer>
+</body>
+</html>
